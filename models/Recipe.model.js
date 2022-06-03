@@ -4,18 +4,20 @@ const Schema = mongoose.Schema;
 const recipeSchema = new Schema({
   title: {
     type: String,
-    validate: value => typeof value === "string",
+    required: true,
     unique: true
   },
-  level: String,
-  ingredients: {
+  level: {
     type: String,
     enum:{
       values: ["Easy Peasy", "Amateur Chef", "UltraPro Chef"]
     }
   },
-  cuisine: String,
-  validate: value => typeof value === "string",
+  ingredients: [],
+  cuisine: {
+    type: String,
+    required: true,
+  },
   dishType: {
     type: String,
     enum:{
