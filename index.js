@@ -15,6 +15,7 @@ mongoose
     // Before adding any recipes to the database, let's remove all existing ones
     // return Recipe.deleteMany()
   })
+  //Iteration 2
   // .then(() => {
   //   const myRecipe = Recipe.create({
   //     title: "Gazpacho",
@@ -27,9 +28,18 @@ mongoose
   //   })
   //   return myRecipe
   // })
+  //Iteration 3
   // .then(() => {
   //   return Recipe.insertMany(data)
   // })
+  //Iteration 4
+  // .then(() => {
+  //   return Recipe.findOneAndUpdate({duration: 220},{duration: 100}, {new: true})
+  // })
+  //Iteration 5
+  .then(() => {
+    return Recipe.findOneAndUpdate({duration: 220},{duration: 100}, {new: true})
+  })
   
   .catch(error => {
     console.error('Error connecting to the database', error);
